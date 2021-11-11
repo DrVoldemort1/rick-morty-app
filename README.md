@@ -2,7 +2,7 @@
 
 # RickMortyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9 by Viictor Joaquin Gonzalez Mundo
 
 ## Before all install the node dependencies 
 
