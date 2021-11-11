@@ -1,0 +1,17 @@
+<div class="card shadow animate__animated animate__zoomIn animate__delay-2s" style="width: 17rem;" >
+  <img [src]="character.image" class="card-img-top" [alt]="character.name">
+  <div class="card-body">
+    <h2 class="card-title"><b>{{character.name}}</b></h2>
+    <p class="card-text"><b>Gender: </b> 
+        <i class="fas fa-mars fa-2x" *ngIf="character.gender == 'Male'" style="color: #08b2c9" ></i>
+        <i class="fas fa-venus fa-2x" *ngIf="character.gender == 'Female'" style="color: pink" ></i>
+        <i class="fas fa-dna fa-2x" *ngIf="character.gender != 'Female' && character.gender != 'Male'" style="color: yellow;" ></i>
+        &nbsp;&nbsp;
+        <b>Status: </b> 
+        <i *ngIf="character.status == 'Alive'" class="fas fa-heart fa-2x corazon" style="color: red;" ></i>
+        <i *ngIf="character.status == 'Dead'" class="fas fa-skull-crossbones fa-2x" style="color: white;" ></i>
+        <i *ngIf="character.status == 'unknown'" class="far fa-question-circle fa-2x" style="color: grey;" ></i>
+      </p>
+    <button class="btn shadow" (click)="eventEmmiter()">See more</button>
+  </div>
+</div>

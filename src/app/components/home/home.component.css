@@ -1,0 +1,65 @@
+.body{
+    background-color: #222d2e;
+    float: left;
+    color: #5ec915;
+    font-family:"Shadows Into Light";
+    bottom: 0;
+    max-width: 100%;
+}
+.containter{
+    max-width: 100% !important;
+}
+
+::ng-deep .xlmodal .modal-dialog {
+    max-width: 70%;
+    width: 70%;
+}
+
+.modal-header{
+    font-family:"Shadows Into Light";
+    border-bottom-style:none ;
+    background-color: #333333;
+    text-align: center;
+    color: #5ec915;
+}
+.modal-body{
+    font-family:"Shadows Into Light";
+    background-image: url("https://swall.teahub.io/photos/small/98-982223_rick-and-morty-wallpaper-ultrawide.png");        
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    color: white;
+    border-bottom-style:none ;
+}
+
+.img-round{
+    border-radius: 50%;
+    width: 170px;
+}
+ng-template{
+    border-bottom-style:none ;
+}
+table{
+    width: 30%;
+    text-align: center;
+    margin-left: 36%;
+    font-size: 1.5em; 
+    margin-right: 34%;
+    font-weight: bold;   
+}
+button{
+    background-color:rgb(230, 156, 19);
+    border-style: none;
+    width: 150px;
+    box-shadow: none;
+}
+button:hover{
+    
+    border-style: solid;
+    background: none;
+    color: rgb(255, 255, 255);
+    border-color: rgb(230, 156, 19);
+}
+*{
+    cursor: url("../../../assets/portalgun.png"),  auto !important;
+}

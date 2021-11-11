@@ -1,0 +1,45 @@
+
+<div class="w-100 body text-center p-3" >
+    <br>
+    <h1 class="animate__animated animate__flipInX animate__delay-1s">What do you wanna look?</h1>
+    <div class="containter p-3">
+       <div *ngFor="let chacarter of characters">
+        <app-character [character]="chacarter" (characterOut)="seeCharacter($event,ver_rastreo)"></app-character>
+       </div>
+    </div>
+</div>
+
+<ng-template #ver_rastreo let-modal class="modal">
+    <div class="modal-body text-center">
+        <img [src]="character_out.image" class="img-round" [alt]="character_out.name"><br>
+        <h4 class="modal-title" style="font-size: 1.5em;"><b>{{character_out.name}}</b></h4>
+        <table>
+            <tr>
+                <td>Specie:</td>
+                <td>{{character_out.species}}</td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <i class="fas fa-mars fa-2x" *ngIf="character_out.gender == 'Male'" style="color: #08b2c9" ></i>
+                    <i class="fas fa-venus fa-2x" *ngIf="character_out.gender == 'Female'" style="color: pink" ></i>
+                    <i class="fas fa-dna fa-2x" *ngIf="character_out.gender != 'Female' && character_out.gender != 'Male'" style="color: yellow;" ></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Status:</td>
+                <td>
+                    <i *ngIf="character_out.status == 'Alive'" class="fas fa-heart fa-2x corazon" style="color: red;" ></i>
+                    <i *ngIf="character_out.status == 'Dead'" class="fas fa-skull-crossbones fa-2x" style="color: white;" ></i>
+                    <i *ngIf="character_out.status == 'unknown'" class="far fa-question-circle fa-2x" style="color: grey;" ></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Origin:</td>
+                <td>{{character_out.origin.name}}</td>
+            </tr>
+        </table>
+        <br><br>
+        <button class="btn shadow " (click)="modal.dismiss('Cross click')">Close</button>
+    </div>
+  </ng-template>

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@keyframes latidos {
+    from {
+        transform: none;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    to {
+        transform: none;
+    }
+}
+
+.corazon {
+    display: inline-block;
+    text-shadow: 0 0 2px #222, 1px 1px 0 #450505;
+    animation: latidos 1s infinite;
+    transform-origin: center;
+}
+
+body{
+    cursor: url("./assets/portalgun.png"),  auto;
+}
